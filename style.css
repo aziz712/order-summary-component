@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Red Hat Display", sans-serif;
+    background: url(images/pattern-background-desktop.svg) no-repeat var(--Pale-blue);
+    background-size: 100%;
+    height: 100vh;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--Very-pale-blue);
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.box .hero-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 25px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+
+p {
+    text-align: center;
+    font-size: 16px;
+    color: var(--Desaturated-blue);
+    margin-bottom: 15px;
+}
+
+.price {
+    display: flex;
+    background: hsl(230, 46%, 95%);
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 28px;
+}
+
+.icon-music {
+    margin-right: 20px;
+}
+
+span {
+    margin-right: 100px;
+}
+
+.price a {
+    color: var(--Bright-blue);
+    font-weight: bold;
+}
+
+.price a:hover {
+    cursor: pointer;
+    color: hsl(245, 49%, 58%);
+}
+
+.Payment {
+    background: var(--Bright-blue);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 90px;
+    border-radius: 8px;
+
+    transition: 0.5s;
+    margin-bottom: 25px;
+    box-shadow: 2px 21px 64px -9px rgba(104, 95, 200, 0.73);
+    -webkit-box-shadow: 2px 21px 64px -9px rgba(104, 95, 200, 0.73);
+    -moz-box-shadow: 2px 21px 64px -9px rgba(104, 95, 200, 0.73);
+}
+
+.Payment:hover {
+    cursor: pointer;
+    background-color: rgb(104, 95, 200);
+    box-shadow: 2px 21px 64px -9px rgba(104, 95, 200, 0.73);
+    -webkit-box-shadow: 2px 21px 64px -9px rgba(104, 95, 200, 0.73);
+    -moz-box-shadow: 2px 21px 64px -9px rgba(104, 95, 200, 0.73);
+
+}
+
+
+.Cancel {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+}
+
+.Cancel:hover {
+    cursor: pointer;
+    color: #000;
+}
+
+@media (max-width:600px) {
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: url(images/pattern-background-mobile.svg) no-repeat var(--Pale-blue);
+        background-size: 100%;
+        height: 600px;
+    }
+    .box{
+        width: 80%;
+        height: 100%;
+        margin-top: 30px;
+    }
+    .Payment{
+        width: 80%;
+        font-size: 8px;
+        padding: 14px;
+        text-align: center;
+
+    }
+    .price{
+        width: 80%;
+    }
+    .icon-music{
+        margin-right: 15px;
+    }
+
+    span {
+        margin-right: 50px;
+        font-size: 12px;
+    }
+    .Cancel{
+        font-size: 12px;
+    }
+}
